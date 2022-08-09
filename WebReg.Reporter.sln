@@ -5,17 +5,29 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter", "WebReg.Reporter\WebReg.Reporter.csproj", "{C01995ED-62FA-40FC-A687-5C7E0E1F8D26}"
 	ProjectSection(ProjectDependencies) = postProject
+		{1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314} = {1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314}
+		{2110B863-E4D9-4F28-902E-BB4CFEC63E40} = {2110B863-E4D9-4F28-902E-BB4CFEC63E40}
 		{335D3BA2-E91E-4987-A808-37960A2D3F45} = {335D3BA2-E91E-4987-A808-37960A2D3F45}
+		{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C} = {44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C}
+		{82761F49-B53D-4AB7-A3A7-232D0FFAA6A9} = {82761F49-B53D-4AB7-A3A7-232D0FFAA6A9}
 		{8D74ECB2-5B03-48A9-B08E-8FCF75DA9DC4} = {8D74ECB2-5B03-48A9-B08E-8FCF75DA9DC4}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Abstractions.Core", "WebReg.Reporter.Abstractions\WebReg.Reporter.Abstractions.Core.csproj", "{335D3BA2-E91E-4987-A808-37960A2D3F45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Implementations", "WebReg.Reporter.Implementations\WebReg.Reporter.Implementations.csproj", "{8D74ECB2-5B03-48A9-B08E-8FCF75DA9DC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Implementations.Core", "WebReg.Reporter.Implementations\WebReg.Reporter.Implementations.Core.csproj", "{8D74ECB2-5B03-48A9-B08E-8FCF75DA9DC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Abstractions.Data", "WebReg.Reporter.Abstractions.Repositories\WebReg.Reporter.Abstractions.Data.csproj", "{82761F49-B53D-4AB7-A3A7-232D0FFAA6A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Abstractions.Domain", "WebReg.Reporter.Abstractions.Domain\WebReg.Reporter.Abstractions.Domain.csproj", "{1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstractions", "Abstractions", "{402C11FC-899E-4EEA-8759-894F4EA66044}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{32C688AF-FA43-4F7E-884E-D17ED6666A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Implementations.Data", "WebReg.Reporter.Implementations.Data\WebReg.Reporter.Implementations.Data.csproj", "{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Implementations.Domain", "WebReg.Reporter.Implementations.Domain\WebReg.Reporter.Implementations.Domain.csproj", "{2110B863-E4D9-4F28-902E-BB4CFEC63E40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,9 +55,25 @@ Global
 		{1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2110B863-E4D9-4F28-902E-BB4CFEC63E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2110B863-E4D9-4F28-902E-BB4CFEC63E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2110B863-E4D9-4F28-902E-BB4CFEC63E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2110B863-E4D9-4F28-902E-BB4CFEC63E40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{335D3BA2-E91E-4987-A808-37960A2D3F45} = {402C11FC-899E-4EEA-8759-894F4EA66044}
+		{8D74ECB2-5B03-48A9-B08E-8FCF75DA9DC4} = {32C688AF-FA43-4F7E-884E-D17ED6666A1F}
+		{82761F49-B53D-4AB7-A3A7-232D0FFAA6A9} = {402C11FC-899E-4EEA-8759-894F4EA66044}
+		{1AF5A39D-CB47-4A3C-AB5E-EDF70EB39314} = {402C11FC-899E-4EEA-8759-894F4EA66044}
+		{44DAB4F7-4A8D-4684-BACE-BDF17EB3D88C} = {32C688AF-FA43-4F7E-884E-D17ED6666A1F}
+		{2110B863-E4D9-4F28-902E-BB4CFEC63E40} = {32C688AF-FA43-4F7E-884E-D17ED6666A1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2BA94EF-68E9-4DD4-9101-F342D902224A}
