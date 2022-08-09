@@ -1,6 +1,6 @@
-﻿using WebReg.Reporter.Abstractions.Interfaces.Entities;
+﻿using WebReg.Reporter.Abstractions.Core.Interfaces.Entities;
 
-namespace WebReg.Reporter.Abstractions.Interfaces.Services;
+namespace WebReg.Reporter.Abstractions.Domain.Interfaces.Services;
 
 public interface IBuilder
 {

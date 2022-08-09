@@ -1,4 +1,4 @@
-﻿namespace WebReg.Reporter.Abstractions.Interfaces.Entities;
+﻿namespace WebReg.Reporter.Abstractions.Core.Interfaces.Entities;
 
 public interface IReportTemplate
 {
