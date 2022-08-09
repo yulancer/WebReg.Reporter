@@ -1,8 +1,10 @@
-﻿namespace WebReg.Reporter.Abstractions.Core.Interfaces;
+﻿using WebReg.Reporter.Abstractions.Core.ValueObjects;
+
+namespace WebReg.Reporter.Abstractions.Core.Interfaces;
 
 public interface ICustomer
 {
-    string Name { get; }
+    CustomerName Name { get; }
 
     string Address(IChannel channel);
 }
