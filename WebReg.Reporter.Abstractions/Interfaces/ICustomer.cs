@@ -1,4 +1,4 @@
-﻿namespace WebReg.Reporter.Abstractions.Core.Interfaces.Entities;
+﻿namespace WebReg.Reporter.Abstractions.Core.Interfaces;
 
 public interface ICustomer
 {
