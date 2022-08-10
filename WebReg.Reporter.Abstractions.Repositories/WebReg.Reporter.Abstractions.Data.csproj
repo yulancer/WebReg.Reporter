@@ -10,4 +10,8 @@
     <ProjectReference Include="..\WebReg.Reporter.Abstractions\WebReg.Reporter.Abstractions.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
 </Project>

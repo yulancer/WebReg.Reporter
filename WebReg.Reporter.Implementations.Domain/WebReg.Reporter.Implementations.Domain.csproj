@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebReg.Reporter.Abstractions.Domain\WebReg.Reporter.Abstractions.Domain.csproj" />
-    <ProjectReference Include="..\WebReg.Reporter.Abstractions.Repositories\WebReg.Reporter.Abstractions.Data.csproj" />
   </ItemGroup>
 
 </Project>

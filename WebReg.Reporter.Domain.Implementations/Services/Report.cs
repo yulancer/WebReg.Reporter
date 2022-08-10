@@ -2,7 +2,7 @@
 using WebReg.Reporter.Abstractions.Data.Interfaces;
 using WebReg.Reporter.Abstractions.Domain.Interfaces;
 
-namespace WebReg.Reporter.Implementations.Core.Services;
+namespace WebReg.Reporter.Domain.Implementations.Services;
 
 public class Report : IReport
 {

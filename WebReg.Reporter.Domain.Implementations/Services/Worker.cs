@@ -1,8 +1,9 @@
-﻿using WebReg.Reporter.Abstractions.Core.Interfaces;
+﻿
+using WebReg.Reporter.Abstractions.Core.Interfaces;
 using WebReg.Reporter.Abstractions.Data.Interfaces;
 using WebReg.Reporter.Abstractions.Domain.Interfaces;
 
-namespace WebReg.Reporter.Implementations.Domain.Services;
+namespace WebReg.Reporter.Domain.Implementations.Services;
 
 public class Worker : IWorker
 {
