@@ -16,6 +16,7 @@ public class ReportBuilder : IReportBuilder
         var template = await report.GetTemplateAsync();
         var data = await report.GetDataAsync();
         var channel = report.Channel;
+
         var messages = new List<IMessage>(data.CustomerData.Length);
 
         foreach (var customerData in data.CustomerData)

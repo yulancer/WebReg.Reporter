@@ -1,8 +1,10 @@
-﻿namespace WebReg.Reporter.Domain.Contracts.Interfaces;
+﻿using WebReg.Reporter.Domain.Contracts.Enums;
+
+namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
 public interface IReport
 {
     Task<IReportTemplate> GetTemplateAsync();
     Task<IReportData> GetDataAsync();
-    IChannel Channel { get; }
+    ChannelType Channel { get; }
 }
