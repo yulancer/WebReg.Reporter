@@ -1,4 +1,4 @@
-﻿namespace WebReg.Reporter.Abstractions.Core.Interfaces;
+﻿namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
 public interface IChannel
 {

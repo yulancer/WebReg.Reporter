@@ -1,6 +1,4 @@
-﻿using WebReg.Reporter.Abstractions.Core.Interfaces;
-using WebReg.Reporter.Abstractions.Data.Interfaces;
-using WebReg.Reporter.Abstractions.Domain.Interfaces;
+﻿using WebReg.Reporter.Domain.Contracts.Interfaces;
 
 namespace WebReg.Reporter.Domain.Implementations.Services;
 

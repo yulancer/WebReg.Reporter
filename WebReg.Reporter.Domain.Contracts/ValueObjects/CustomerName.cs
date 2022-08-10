@@ -1,4 +1,4 @@
-﻿namespace WebReg.Reporter.Abstractions.Core.ValueObjects;
+﻿namespace WebReg.Reporter.Domain.Contracts.ValueObjects;
 
 public class CustomerName
 {

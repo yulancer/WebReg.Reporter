@@ -1,6 +1,4 @@
-﻿using WebReg.Reporter.Abstractions.Core.Interfaces;
-
-namespace WebReg.Reporter.Abstractions.Domain.Interfaces;
+﻿namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
 public interface ISender
 {

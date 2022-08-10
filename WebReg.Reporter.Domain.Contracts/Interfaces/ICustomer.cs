@@ -1,6 +1,6 @@
-﻿using WebReg.Reporter.Abstractions.Core.ValueObjects;
+﻿using WebReg.Reporter.Domain.Contracts.ValueObjects;
 
-namespace WebReg.Reporter.Abstractions.Core.Interfaces;
+namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
 public interface ICustomer
 {
