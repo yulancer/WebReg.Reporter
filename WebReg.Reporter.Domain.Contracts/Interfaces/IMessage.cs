@@ -1,4 +1,6 @@
-﻿namespace WebReg.Reporter.Domain.Contracts.Interfaces;
+﻿using WebReg.Reporter.Domain.Contracts.Enums;
+
+namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
 public interface IMessage
 {
@@ -7,4 +9,6 @@ public interface IMessage
     string Body { get; set; }
 
     string Header { get; set; }
+
+    ChannelType Channel { get; set; }
 }

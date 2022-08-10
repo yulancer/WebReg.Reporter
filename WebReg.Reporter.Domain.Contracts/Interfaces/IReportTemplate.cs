@@ -2,7 +2,7 @@
 
 public interface IReportTemplate
 {
-    IReport Report { get; }
+    IReportBuilder ReportBuilder { get; }
 
     IChannel Channel { get; }
 }

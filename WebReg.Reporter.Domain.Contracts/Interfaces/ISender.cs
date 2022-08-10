@@ -2,5 +2,5 @@
 
 public interface ISender
 {
-    Task SendAsync(IMessage message, IChannel channel);
+    Task SendAsync(IMessage message);
 }

@@ -2,5 +2,5 @@
 
 public interface ITemplateRepository
 {
-    Task<IReportTemplate> GetAsync(IReport report, IChannel channel);
+    Task<IReportTemplate> GetAsync(IReportBuilder reportBuilder, IChannel channel);
 }

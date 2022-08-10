@@ -2,7 +2,7 @@
 
 public interface IReport
 {
-    Task<IMessage[]> GetMessagesAsync(IReportData reportData);
-
+    Task<IReportTemplate> GetTemplateAsync();
+    Task<IReportData> GetDataAsync();
     IChannel Channel { get; }
 }

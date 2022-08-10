@@ -5,13 +5,13 @@ namespace WebReg.Reporter.Domain.Implementations.Services;
 public class Worker : IWorker
 {
     private readonly IReportRepository _reportRepository;
-    private readonly IDataRepository _dataRepository;
+    private readonly IReportBuilder _reportBuilder;
     private readonly ISender _sender;
 
-    public Worker(IReportRepository reportRepository, IDataRepository dataRepository, ISender sender)
+    public Worker(IReportRepository reportRepository, IReportBuilder reportBuilder, ISender sender)
     {
         _reportRepository = reportRepository;
-        _dataRepository = dataRepository;
+        _reportBuilder = reportBuilder;
         _sender = sender;
     }
 
@@ -20,12 +20,10 @@ public class Worker : IWorker
         var reports = await _reportRepository.Reports(predicate);
         foreach (var report in reports)
         {
-            var reportData = await _dataRepository.GetAsync(report);
-            IChannel channel = report.Channel;
-            var messages = await report.GetMessagesAsync(reportData);
+            var messages = await _reportBuilder.GetMessagesAsync(report);
             foreach (var message in messages)
             {
-                await _sender.SendAsync(message, channel);
+                await _sender.SendAsync(message);
             }
         }
     }

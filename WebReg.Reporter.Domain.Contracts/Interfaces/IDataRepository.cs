@@ -2,5 +2,5 @@
 
 public interface IDataRepository
 {
-    Task<IReportData> GetAsync(IReport report);
+    Task<IReportData> GetAsync(IReportBuilder reportBuilder);
 }
