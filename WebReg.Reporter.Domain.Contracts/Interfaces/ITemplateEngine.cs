@@ -1,6 +1,9 @@
 ﻿namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
+/// <summary>
+/// движок шаблонов.
+/// </summary>
 public interface ITemplateEngine
 {
-    Task<IMessage> BuildAsync(ICustomer customer, ICustomerReportData data, IReportTemplate template);
+    string Parse(string template, object data, ICustomer customer);
 }

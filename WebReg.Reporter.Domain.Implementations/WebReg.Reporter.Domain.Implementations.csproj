@@ -10,4 +10,8 @@
     <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\" />
+  </ItemGroup>
+
 </Project>

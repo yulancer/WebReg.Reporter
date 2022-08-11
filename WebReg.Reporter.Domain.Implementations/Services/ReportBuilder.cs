@@ -4,11 +4,11 @@ namespace WebReg.Reporter.Domain.Implementations.Services;
 
 public class ReportBuilder : IReportBuilder
 {
-    private readonly ITemplateEngine _templateEngine;
+    private readonly IMessageBuilder _messageBuilder;
 
-    public ReportBuilder(ITemplateEngine templateEngine)
+    public ReportBuilder(IMessageBuilder messageBuilder)
     {
-        _templateEngine = templateEngine;
+        _messageBuilder = messageBuilder;
     }
 
     public async Task<IMessage[]> GetMessagesAsync(IReport report)
@@ -24,7 +24,7 @@ public class ReportBuilder : IReportBuilder
             var address = customerData.Customer.Address(channel);
             if (!string.IsNullOrWhiteSpace(address))
             {
-                var message = await _templateEngine.BuildAsync(customerData.Customer, customerData.CustomerReportData, template);
+                var message = await _messageBuilder.BuildAsync(customerData.Customer, customerData.CustomerReportData, template, channel);
                 messages.Add(message);
             }
         }
