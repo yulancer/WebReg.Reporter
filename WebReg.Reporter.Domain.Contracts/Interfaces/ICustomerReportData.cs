@@ -5,7 +5,7 @@ public interface ICustomerReportData
     /// <summary>
     /// данные для тела сообщения.
     /// </summary>
-    object bodyData { get; }
+    object BodyData { get; }
 
     /// <summary>
     /// данные для заголовка сообщения.

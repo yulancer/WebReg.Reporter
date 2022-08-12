@@ -12,14 +12,19 @@ namespace WebReg.Reporter.Adapters.TemplateEngine
     {
         private static readonly FluidParser Parser = new();
 
-        public string Parse(string templateStr, object data, ICustomer customer)
+        public string Parse(string templateStr, object? data, ICustomer customer)
         {
             if (Parser.TryParse(templateStr, out var template, out var error))
             {
                 var model = new { Data = data, Customer = customer };
                 var context = new TemplateContext(model);
+
+                context.Options.MemberAccessStrategy.Register(typeof(ICustomer));
                 context.Options.MemberAccessStrategy.Register(model.GetType());
-                context.Options.MemberAccessStrategy.Register(data.GetType());
+                if (data != null)
+                {
+                    context.Options.MemberAccessStrategy.Register(data.GetType());
+                }
 
                 return template.Render(context);
             }

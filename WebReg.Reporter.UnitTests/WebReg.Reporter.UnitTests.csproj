@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WebReg.Reporter.Adapters.TemplateEngine\WebReg.Reporter.Adapters.TemplateEngine.csproj" />
     <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\WebReg.Reporter.Domain.Implementations\WebReg.Reporter.Domain.Implementations.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,5 +5,5 @@
 /// </summary>
 public interface ITemplateEngine
 {
-    string Parse(string template, object data, ICustomer customer);
+    string Parse(string template, object? data, ICustomer customer);
 }
