@@ -1,12 +1,30 @@
-﻿using WebReg.Reporter.Domain.Contracts.Interfaces;
+﻿using Fluid;
+
+using Parlot.Fluent;
+
+using System.Reflection;
+
+using WebReg.Reporter.Domain.Contracts.Interfaces;
 
 namespace WebReg.Reporter.Adapters.TemplateEngine
 {
     public class FluidTemplateEngine : ITemplateEngine
     {
-        public string Parse(string template, object data, ICustomer customer)
+        private static readonly FluidParser Parser = new();
+
+        public string Parse(string templateStr, object data, ICustomer customer)
         {
-            throw new NotImplementedException();
+            if (Parser.TryParse(templateStr, out var template, out var error))
+            {
+                var model = new { Data = data, Customer = customer };
+                var context = new TemplateContext(model);
+                context.Options.MemberAccessStrategy.Register(model.GetType());
+                context.Options.MemberAccessStrategy.Register(data.GetType());
+
+                return template.Render(context);
+            }
+
+            throw new Exception($"ошибка в шаблоне: {error}");
         }
     }
 }

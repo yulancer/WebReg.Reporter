@@ -16,4 +16,9 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebReg.Reporter.Adapters.TemplateEngine\WebReg.Reporter.Adapters.TemplateEngine.csproj" />
+    <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

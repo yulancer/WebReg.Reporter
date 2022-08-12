@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Fluid.Core" Version="2.2.15" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
   </ItemGroup>
 
