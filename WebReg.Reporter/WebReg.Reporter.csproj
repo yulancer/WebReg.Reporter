@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebReg.Reporter.Adapters.TemplateEngine\WebReg.Reporter.Adapters.TemplateEngine.csproj" />
-    <ProjectReference Include="..\WebReg.Reporter.Data.Implementations\WebReg.Reporter.Data.Implementations.csproj" />
     <ProjectReference Include="..\WebReg.Reporter.Domain.Implementations\WebReg.Reporter.Domain.Implementations.csproj" />
   </ItemGroup>
 
