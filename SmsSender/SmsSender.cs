@@ -1,7 +1,7 @@
 ﻿using WebReg.Reporter.Domain.Contracts.Enums;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 
-namespace SmsSender
+namespace WebReg.Reporter.Senders.SmsSender
 {
     public class SmsSender : ISender
     {

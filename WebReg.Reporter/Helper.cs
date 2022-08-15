@@ -1,6 +1,4 @@
 ﻿using System.Reflection;
-
-using WebReg.Reporter.Adapters.TemplateEngine;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Implementations.Services;
 

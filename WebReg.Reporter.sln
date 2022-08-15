@@ -33,15 +33,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Adapters.Sc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "senders", "senders", "{1F2BBFC1-2DD6-4A2C-8669-C1F928955C24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender", "EmailSender\EmailSender.csproj", "{323FF271-B86D-4BCE-99E5-5B41270D1073}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Senders.EmailSender", "EmailSender\WebReg.Reporter.Senders.EmailSender.csproj", "{323FF271-B86D-4BCE-99E5-5B41270D1073}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsSender", "SmsSender\SmsSender.csproj", "{3F13A381-3543-4F62-955F-B70FD38811FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Senders.SmsSender", "SmsSender\WebReg.Reporter.Senders.SmsSender.csproj", "{3F13A381-3543-4F62-955F-B70FD38811FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "reports", "reports", "{75BFE2FF-1E45-439D-8355-D7D38638EF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleReports", "SampleReports\SampleReports.csproj", "{FF4BE95F-D8FB-4FDB-8D28-ACA1AC6553CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Reports.SampleReports", "SampleReports\WebReg.Reporter.Reports.SampleReports.csproj", "{FF4BE95F-D8FB-4FDB-8D28-ACA1AC6553CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportsDto", "ReportsDto\ReportsDto.csproj", "{D6398377-A635-4B45-B36A-B1CDB3BD03CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Reports.Contracts", "ReportsDto\WebReg.Reporter.Reports.Contracts.csproj", "{D6398377-A635-4B45-B36A-B1CDB3BD03CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

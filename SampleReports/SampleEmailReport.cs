@@ -1,9 +1,9 @@
-﻿using ReportsDto;
-using WebReg.Reporter.Domain.Contracts.Enums;
+﻿using WebReg.Reporter.Domain.Contracts.Enums;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Contracts.ValueObjects;
+using WebReg.Reporter.Reports.Contracts;
 
-namespace WebReg.Reporter.Domain.Implementations.Services.Reports;
+namespace WebReg.Reporter.Reports.SampleReports;
 
 public class SampleEmailReport : IReport
 {

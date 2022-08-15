@@ -2,7 +2,7 @@
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Contracts.ValueObjects;
 
-namespace ReportsDto;
+namespace WebReg.Reporter.Reports.Contracts;
 
 public class Customer : ICustomer
 {

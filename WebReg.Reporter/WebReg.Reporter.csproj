@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EmailSender\EmailSender.csproj" />
-    <ProjectReference Include="..\SmsSender\SmsSender.csproj" />
+    <ProjectReference Include="..\EmailSender\WebReg.Reporter.Senders.EmailSender.csproj" />
+    <ProjectReference Include="..\SmsSender\WebReg.Reporter.Senders.SmsSender.csproj" />
     <ProjectReference Include="..\WebReg.Reporter.Adapters.ScribanTemplateEngine\WebReg.Reporter.Adapters.ScribanTemplateEngine.csproj" />
     <ProjectReference Include="..\WebReg.Reporter.Adapters.TemplateEngine\WebReg.Reporter.Adapters.FluidTemplateEngine.csproj" />
     <ProjectReference Include="..\WebReg.Reporter.Domain.Implementations\WebReg.Reporter.Domain.Implementations.csproj" />

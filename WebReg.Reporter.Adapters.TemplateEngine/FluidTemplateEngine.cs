@@ -1,7 +1,7 @@
 ﻿using Fluid;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 
-namespace WebReg.Reporter.Adapters.TemplateEngine
+namespace WebReg.Reporter.Adapters.FluidTemplateEngine
 {
     public class FluidTemplateEngine : ITemplateEngine
     {

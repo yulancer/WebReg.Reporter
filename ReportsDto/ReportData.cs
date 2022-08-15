@@ -1,6 +1,6 @@
 ﻿using WebReg.Reporter.Domain.Contracts.Interfaces;
 
-namespace ReportsDto;
+namespace WebReg.Reporter.Reports.Contracts;
 
 public class ReportData : IReportData
 {
