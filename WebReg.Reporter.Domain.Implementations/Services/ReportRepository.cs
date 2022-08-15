@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 
-namespace WebReg.Reporter.Data.Implementations.Services;
+namespace WebReg.Reporter.Domain.Implementations.Services;
 
 public class ReportRepository : IReportRepository
 {

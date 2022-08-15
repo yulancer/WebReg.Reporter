@@ -2,9 +2,7 @@
 
 namespace WebReg.Reporter.Domain.Contracts.Interfaces;
 
-public interface ISender
+public interface ISenderFactory
 {
-    Task SendAsync(IMessage message);
-
-    ChannelType ChannelType { get; }
+    Task<ISender?> Create(ChannelType channelType);
 }

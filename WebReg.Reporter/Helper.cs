@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 
 using WebReg.Reporter.Adapters.TemplateEngine;
-using WebReg.Reporter.Data.Implementations.Services;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Implementations.Services;
 
@@ -18,30 +17,28 @@ public static class Helper
 
         services.AddScoped<IReportRepository, ReportRepository>();
         services.AddScoped<ITemplateEngine, FluidTemplateEngine>();
-        services.AddScoped<ISender, Sender>();
+        services.AddScoped<ISenderService, SenderService>();
+        services.AddScoped<ISenderFactory, SenderFactory>();
 
-        services.AddAllReports();
+        services.AddAllImplementations<IReport>();
+        services.AddAllImplementations<ISender>();
 
         return services;
     }
 
-    private static IServiceCollection AddAllReports(this IServiceCollection services)
+    private static IServiceCollection AddAllImplementations<T>(this IServiceCollection services)
     {
-        var assembly = Assembly.GetEntryAssembly();
-        if (assembly != null)
+        var assemblies = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll");
+
+        foreach (var assemblyName in assemblies)
         {
-            var assemblies = assembly.GetReferencedAssemblies();
+            var assembly = Assembly.Load(AssemblyName.GetAssemblyName(assemblyName));
 
-            foreach (var assemblyName in assemblies)
+            foreach (var ti in assembly.DefinedTypes)
             {
-                assembly = Assembly.Load(assemblyName);
-
-                foreach (var ti in assembly.DefinedTypes)
+                if (ti.ImplementedInterfaces.Contains(typeof(T)))
                 {
-                    if (ti.ImplementedInterfaces.Contains(typeof(IReport)))
-                    {
-                        services.AddTransient(typeof(IReport), ti);
-                    }
+                    services.AddTransient(typeof(T), ti);
                 }
             }
         }

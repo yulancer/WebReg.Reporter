@@ -6,13 +6,13 @@ public class Worker : IWorker
 {
     private readonly IReportRepository _reportRepository;
     private readonly IReportBuilder _reportBuilder;
-    private readonly ISender _sender;
+    private readonly ISenderService _senderService;
 
-    public Worker(IReportRepository reportRepository, IReportBuilder reportBuilder, ISender sender)
+    public Worker(IReportRepository reportRepository, IReportBuilder reportBuilder, ISenderService senderService)
     {
         _reportRepository = reportRepository;
         _reportBuilder = reportBuilder;
-        _sender = sender;
+        _senderService = senderService;
     }
 
     public async Task BuildAndSendReports(Func<IReport, bool>? predicate = null)
@@ -23,7 +23,7 @@ public class Worker : IWorker
             var messages = await _reportBuilder.GetMessagesAsync(report);
             foreach (var message in messages)
             {
-                await _sender.SendAsync(message);
+                await _senderService.SendAsync(message);
             }
         }
     }
