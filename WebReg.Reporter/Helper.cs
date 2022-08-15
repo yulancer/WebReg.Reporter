@@ -16,12 +16,12 @@ public static class Helper
         services.AddScoped<IMessageBuilder, MessageBuilder>();
 
         services.AddScoped<IReportRepository, ReportRepository>();
-        services.AddScoped<ITemplateEngine, FluidTemplateEngine>();
         services.AddScoped<ISenderService, SenderService>();
         services.AddScoped<ISenderFactory, SenderFactory>();
 
         services.AddAllImplementations<IReport>();
         services.AddAllImplementations<ISender>();
+        services.AddAllImplementations<ITemplateEngine>();
 
         return services;
     }
