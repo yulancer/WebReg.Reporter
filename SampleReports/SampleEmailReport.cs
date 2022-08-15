@@ -1,7 +1,7 @@
-﻿using WebReg.Reporter.Domain.Contracts.Enums;
+﻿using ReportsDto;
+using WebReg.Reporter.Domain.Contracts.Enums;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Contracts.ValueObjects;
-using WebReg.Reporter.Domain.Implementations.Dto;
 
 namespace WebReg.Reporter.Domain.Implementations.Services.Reports;
 

@@ -1,9 +1,4 @@
 ﻿using Fluid;
-
-using Parlot.Fluent;
-
-using System.Reflection;
-
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 
 namespace WebReg.Reporter.Adapters.TemplateEngine

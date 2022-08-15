@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-
 using WebReg.Reporter.Domain.Contracts.Enums;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 

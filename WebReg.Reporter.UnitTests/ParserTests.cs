@@ -1,8 +1,8 @@
 using WebReg.Reporter.Adapters.ScribanTemplateEngine;
 using WebReg.Reporter.Adapters.TemplateEngine;
+using WebReg.Reporter.Domain.Contracts.Enums;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Contracts.ValueObjects;
-using WebReg.Reporter.Domain.Implementations.Dto;
 
 namespace WebReg.Reporter.UnitTests
 {
@@ -32,6 +32,16 @@ namespace WebReg.Reporter.UnitTests
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Contains(email), "email не найден");
             Assert.IsTrue(result.Contains(name), "имя не найдено");
+        }
+    }
+
+    public class Customer : ICustomer
+    {
+        public CustomerName Name { get; set; }
+        public string AddressStr { get; set; }
+        public string Address(ChannelType channel)
+        {
+            return AddressStr;
         }
     }
 }
