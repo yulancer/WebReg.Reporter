@@ -1,8 +1,7 @@
 ﻿using Scriban;
-
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 
-namespace WebReg.Reporter.Adapters.TemplateEngine;
+namespace WebReg.Reporter.Adapters.ScribanTemplateEngine;
 
 public class ScribanTemplateEngine : ITemplateEngine
 {
