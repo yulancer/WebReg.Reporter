@@ -1,8 +1,10 @@
 ﻿using System.Reflection;
+using AutoMapper;
 using WebReg.Reporter.Domain.Contracts.Interfaces;
 using WebReg.Reporter.Domain.Implementations.Services;
+using WebReg.Reporter.WebApi.Contracts.Interfaces;
 
-namespace WebReg.Reporter;
+namespace WebReg.Reporter.WebApi.Application;
 
 public static class Helper
 {
@@ -21,6 +23,10 @@ public static class Helper
         services.AddAllImplementations<ISender>();
         services.AddAllImplementations<ITemplateEngine>();
 
+        services.AddAllImplementations<IPresenterService>();
+
+        services.AddSingleton(new MapperConfiguration(mc => mc.AddMaps(AppDomain.CurrentDomain.GetAssemblies()))
+            .CreateMapper());
         return services;
     }
 

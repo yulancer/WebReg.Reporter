@@ -5,15 +5,18 @@ using WebReg.Reporter.Reports.Contracts;
 
 namespace WebReg.Reporter.Reports.SampleReports;
 
+/// <summary>
+/// Якобы отправка по почте некой рассылки
+/// </summary>
 public class SampleEmailReport : IReport
 {
     public Task<IReportTemplate> GetTemplateAsync()
     {
         Template template = new Template
         {
-            HeaderTemplate = "Сообщение для пользователя {{ Customer.Name.Name }}",
-            BodyTemplate = @" Уважаемый {{ Customer.Name.Name }} 
-                Подписка на продукт  {{ Data.ProductName }} оканчивается {{ Data.ExpiryDate }}
+            HeaderTemplate = "Сообщение для пользователя {{ customer.name.name }}",
+            BodyTemplate = @" Уважаемый {{ customer.name.name }} 
+                Подписка на продукт  {{ data.productname }} оканчивается {{ data.expirydate }}
             "
         };
 
@@ -48,4 +51,5 @@ public class SampleEmailReport : IReport
     }
 
     public ChannelType Channel => ChannelType.Email;
+    public string ReportName => "Якобы отправка по почте некой рассылки";
 }

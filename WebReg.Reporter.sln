@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter", "WebReg.Reporter\WebReg.Reporter.csproj", "{C01995ED-62FA-40FC-A687-5C7E0E1F8D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.WebApi.Application", "WebReg.Reporter\WebReg.Reporter.WebApi.Application.csproj", "{C01995ED-62FA-40FC-A687-5C7E0E1F8D26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{256EF08A-1F0F-45EE-8126-5CE69588C9C0}"
 EndProject
@@ -29,19 +29,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Adapters.Fl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template_engines", "template_engines", "{C632E312-795D-4783-BED0-5D9221FA3765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Adapters.ScribanTemplateEngine", "WebReg.Reporter.Adapters.ScribanTemplateEngine\WebReg.Reporter.Adapters.ScribanTemplateEngine.csproj", "{05C69D79-F9B6-475F-AFD6-6F1F128D9A46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Adapters.ScribanTemplateEngine", "WebReg.Reporter.Adapters.ScribanTemplateEngine\WebReg.Reporter.Adapters.ScribanTemplateEngine.csproj", "{05C69D79-F9B6-475F-AFD6-6F1F128D9A46}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "senders", "senders", "{1F2BBFC1-2DD6-4A2C-8669-C1F928955C24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Senders.EmailSender", "EmailSender\WebReg.Reporter.Senders.EmailSender.csproj", "{323FF271-B86D-4BCE-99E5-5B41270D1073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Senders.EmailSender", "EmailSender\WebReg.Reporter.Senders.EmailSender.csproj", "{323FF271-B86D-4BCE-99E5-5B41270D1073}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Senders.SmsSender", "SmsSender\WebReg.Reporter.Senders.SmsSender.csproj", "{3F13A381-3543-4F62-955F-B70FD38811FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Senders.SmsSender", "SmsSender\WebReg.Reporter.Senders.SmsSender.csproj", "{3F13A381-3543-4F62-955F-B70FD38811FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "reports", "reports", "{75BFE2FF-1E45-439D-8355-D7D38638EF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Reports.SampleReports", "SampleReports\WebReg.Reporter.Reports.SampleReports.csproj", "{FF4BE95F-D8FB-4FDB-8D28-ACA1AC6553CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Reports.SampleReports", "SampleReports\WebReg.Reporter.Reports.SampleReports.csproj", "{FF4BE95F-D8FB-4FDB-8D28-ACA1AC6553CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Reports.Contracts", "ReportsDto\WebReg.Reporter.Reports.Contracts.csproj", "{D6398377-A635-4B45-B36A-B1CDB3BD03CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebReg.Reporter.Reports.Contracts", "ReportsDto\WebReg.Reporter.Reports.Contracts.csproj", "{D6398377-A635-4B45-B36A-B1CDB3BD03CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.WebApi.Contracts", "WebReg.Reporter.WebApi.Contracts\WebReg.Reporter.WebApi.Contracts.csproj", "{9D2C3245-1FBA-4EA6-9824-07D4D42BD579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.WebApi.Presenter", "WebReg.Reporter.WebApi.Presenter\WebReg.Reporter.WebApi.Presenter.csproj", "{CCA01BC2-51D5-4790-B13E-0DFEDE09233A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Domain.Common", "WebReg.Reporter.Domain.Common\WebReg.Reporter.Domain.Common.csproj", "{34297454-736A-4EFA-9581-C491F561655A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +103,18 @@ Global
 		{D6398377-A635-4B45-B36A-B1CDB3BD03CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6398377-A635-4B45-B36A-B1CDB3BD03CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6398377-A635-4B45-B36A-B1CDB3BD03CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2C3245-1FBA-4EA6-9824-07D4D42BD579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2C3245-1FBA-4EA6-9824-07D4D42BD579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2C3245-1FBA-4EA6-9824-07D4D42BD579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2C3245-1FBA-4EA6-9824-07D4D42BD579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA01BC2-51D5-4790-B13E-0DFEDE09233A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA01BC2-51D5-4790-B13E-0DFEDE09233A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA01BC2-51D5-4790-B13E-0DFEDE09233A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA01BC2-51D5-4790-B13E-0DFEDE09233A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34297454-736A-4EFA-9581-C491F561655A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34297454-736A-4EFA-9581-C491F561655A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34297454-736A-4EFA-9581-C491F561655A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34297454-736A-4EFA-9581-C491F561655A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +134,9 @@ Global
 		{3F13A381-3543-4F62-955F-B70FD38811FA} = {1F2BBFC1-2DD6-4A2C-8669-C1F928955C24}
 		{FF4BE95F-D8FB-4FDB-8D28-ACA1AC6553CD} = {75BFE2FF-1E45-439D-8355-D7D38638EF31}
 		{D6398377-A635-4B45-B36A-B1CDB3BD03CA} = {75BFE2FF-1E45-439D-8355-D7D38638EF31}
+		{9D2C3245-1FBA-4EA6-9824-07D4D42BD579} = {0E8AABDF-43F5-4C98-BF91-D57D3BE6C335}
+		{CCA01BC2-51D5-4790-B13E-0DFEDE09233A} = {0E8AABDF-43F5-4C98-BF91-D57D3BE6C335}
+		{34297454-736A-4EFA-9581-C491F561655A} = {256EF08A-1F0F-45EE-8126-5CE69588C9C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2BA94EF-68E9-4DD4-9101-F342D902224A}

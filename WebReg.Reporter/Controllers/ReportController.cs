@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebReg.Reporter.Controllers
+using WebReg.Reporter.WebApi.Contracts.Dto;
+using WebReg.Reporter.WebApi.Contracts.Interfaces;
+
+namespace WebReg.Reporter.WebApi.Application.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -9,21 +12,17 @@ namespace WebReg.Reporter.Controllers
 
         private readonly ILogger<ReportController> _logger;
 
-        public ReportController(ILogger<ReportController> logger)
+        private readonly IPresenterService _presenterService;
+        public ReportController(ILogger<ReportController> logger, IPresenterService presenterService)
         {
             _logger = logger;
+            _presenterService = presenterService;
         }
 
-        //[HttpGet(Name = "GetReports")]
-        //public IEnumerable<WeatherForecast> Get()
-        //{
-        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        //    {
-        //        Date = DateTime.Now.AddDays(index),
-        //        TemperatureC = Random.Shared.Next(-20, 55),
-        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        //    })
-        //    .ToArray();
-        //}
+        [HttpGet(Name = "GetReports")]
+        public async Task<ReportViewDto[]> Get()
+        {
+            return await _presenterService.GetAllReports();
+        }
     }
 }

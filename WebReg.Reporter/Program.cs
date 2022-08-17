@@ -1,4 +1,4 @@
-using WebReg.Reporter;
+using WebReg.Reporter.WebApi.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 

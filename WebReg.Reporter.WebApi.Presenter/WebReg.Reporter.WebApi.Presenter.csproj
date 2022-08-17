@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebReg.Reporter.Domain.Common\WebReg.Reporter.Domain.Common.csproj" />
+    <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\WebReg.Reporter.WebApi.Contracts\WebReg.Reporter.WebApi.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
