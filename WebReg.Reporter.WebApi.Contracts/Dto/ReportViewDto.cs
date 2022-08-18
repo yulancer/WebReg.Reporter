@@ -14,4 +14,9 @@ public class ReportViewDto
     /// для какого канала предназначен
     /// </summary>
     public string ChannelName { get; set; }
+
+    /// <summary>
+    /// уникальный ID отчета
+    /// </summary>
+    public Guid ReportId { get; set; }    
 }

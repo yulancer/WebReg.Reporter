@@ -23,5 +23,10 @@ namespace WebReg.Reporter.Domain.Common
             return enumValue.GetType().GetMember(enumValue.ToString()).First().GetCustomAttribute<TAttribute>();
         }
 
+        public static TAttribute? GetAttribute<TAttribute>(this object enumValue)
+            where TAttribute : Attribute
+        {
+            return enumValue.GetType().GetTypeInfo().GetCustomAttribute<TAttribute>();
+        }
     }
 }

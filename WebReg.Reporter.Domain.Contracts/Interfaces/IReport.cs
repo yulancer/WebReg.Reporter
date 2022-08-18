@@ -8,4 +8,5 @@ public interface IReport
     Task<IReportData> GetDataAsync(IReportParams reportParams);
     ChannelType Channel { get; }
     string ReportName { get; }
+    Guid ReportId { get; }
 }

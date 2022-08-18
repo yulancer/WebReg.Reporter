@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebReg.Reporter.Domain.Common\WebReg.Reporter.Domain.Common.csproj" />
     <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
   </ItemGroup>
 
