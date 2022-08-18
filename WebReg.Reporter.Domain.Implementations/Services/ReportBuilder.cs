@@ -11,10 +11,10 @@ public class ReportBuilder : IReportBuilder
         _messageBuilder = messageBuilder;
     }
 
-    public async Task<IMessage[]> GetMessagesAsync(IReport report)
+    public async Task<IMessage[]> GetMessagesAsync(IReport report, IReportParams reportParams)
     {
         var template = await report.GetTemplateAsync();
-        var data = await report.GetDataAsync();
+        var data = await report.GetDataAsync(reportParams);
         var channel = report.Channel;
 
         var messages = new List<IMessage>(data.CustomerData.Length);

@@ -2,5 +2,5 @@
 
 public interface IWorker
 {
-    Task BuildAndSendReports(Func<IReport, bool>? predicate = null);
+    Task BuildAndSendReports(IReportParams reportParams, Func<IReport, bool>? predicate = null);
 }

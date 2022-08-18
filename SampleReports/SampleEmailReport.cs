@@ -23,7 +23,7 @@ public class SampleEmailReport : IReport
         return Task.FromResult<IReportTemplate>(template);
     }
 
-    public Task<IReportData> GetDataAsync()
+    public Task<IReportData> GetDataAsync(IReportParams reportParams)
     {
         var reportData = new ReportData
         {
@@ -51,5 +51,6 @@ public class SampleEmailReport : IReport
     }
 
     public ChannelType Channel => ChannelType.Email;
+
     public string ReportName => "Якобы отправка по почте некой рассылки";
 }

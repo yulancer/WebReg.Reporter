@@ -15,12 +15,12 @@ public class Worker : IWorker
         _senderService = senderService;
     }
 
-    public async Task BuildAndSendReports(Func<IReport, bool>? predicate = null)
+    public async Task BuildAndSendReports(IReportParams reportParams, Func<IReport, bool>? predicate = null)
     {
         var reports = await _reportRepository.Reports(predicate);
         foreach (var report in reports)
         {
-            var messages = await _reportBuilder.GetMessagesAsync(report);
+            var messages = await _reportBuilder.GetMessagesAsync(report, reportParams);
             foreach (var message in messages)
             {
                 await _senderService.SendAsync(message);

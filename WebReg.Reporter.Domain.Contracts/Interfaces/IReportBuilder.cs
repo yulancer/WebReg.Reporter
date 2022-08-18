@@ -2,5 +2,5 @@
 
 public interface IReportBuilder
 {
-    Task<IMessage[]> GetMessagesAsync(IReport report);
+    Task<IMessage[]> GetMessagesAsync(IReport report, IReportParams reportParams);
 }
