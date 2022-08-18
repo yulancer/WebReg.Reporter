@@ -15,4 +15,7 @@ public enum ChannelType
 
     [Display(Name = "Telegram", Description = "Бот Telegram")]
     Telegram = 4,
+
+    [Display(Name = "Console", Description = "Вывод в stdio")]
+    Console = 5,
 }

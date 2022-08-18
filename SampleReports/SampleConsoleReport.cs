@@ -9,7 +9,7 @@ namespace WebReg.Reporter.Reports.SampleReports;
 /// Якобы отправка по почте некой рассылки
 /// </summary>
 [Report("DEABC81A-C4AE-434B-9C5C-C554AF4C2D77", "Якобы отправка по почте некой рассылки")]
-public class SampleEmailReport : DecoratedReportBase, IReport
+public class SampleConsoleReport : DecoratedReportBase, IReport
 {
     public Task<IReportTemplate> GetTemplateAsync()
     {
@@ -51,5 +51,5 @@ public class SampleEmailReport : DecoratedReportBase, IReport
         return Task.FromResult<IReportData>(reportData);
     }
 
-    public ChannelType Channel => ChannelType.Email;
+    public ChannelType Channel => ChannelType.Console;
 }
