@@ -1,4 +1,6 @@
-﻿using WebReg.Reporter.Domain.Contracts.Interfaces;
+﻿using System;
+
+using WebReg.Reporter.Domain.Contracts.Interfaces;
 
 namespace WebReg.Reporter.Domain.Implementations.Services;
 
@@ -19,6 +21,16 @@ public class Worker : IWorker
     {
         var reports = await _reportRepository.Reports(predicate);
         foreach (var report in reports)
+        {
+            await BuildAndSendReport(reportParams, report.ReportId);
+        }
+    }
+
+    public async Task BuildAndSendReport(IReportParams reportParams, Guid reportId)
+    {
+        var reports = await _reportRepository.Reports();
+        var report = reports.FirstOrDefault(r => r.ReportId == reportId);
+        if (report != null)
         {
             var messages = await _reportBuilder.GetMessagesAsync(report, reportParams);
             foreach (var message in messages)

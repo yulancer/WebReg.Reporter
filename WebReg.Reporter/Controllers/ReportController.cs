@@ -6,7 +6,7 @@ using WebReg.Reporter.WebApi.Contracts.Interfaces;
 namespace WebReg.Reporter.WebApi.Application.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class ReportController : ControllerBase
     {
 
@@ -20,9 +20,17 @@ namespace WebReg.Reporter.WebApi.Application.Controllers
         }
 
         [HttpGet(Name = "GetReports")]
-        public async Task<ReportViewDto[]> Get()
+        public async Task<ReportViewDto[]> GetReports()
         {
             return await _presenterService.GetAllReports();
+        }
+
+        [HttpGet]
+        [Route("{reportId}")]
+        public async Task RunReport(Guid reportId, DateTime? from, DateTime? to)
+        {
+            ReportParamsDto reportParams = new ReportParamsDto() {StartDate = from, EndDate = to};
+            await _presenterService.RunReport(reportId, reportParams);
         }
     }
 }

@@ -9,4 +9,12 @@ public interface IPresenterService
     /// </summary>
     /// <returns></returns>
     Task<ReportViewDto[]> GetAllReports();
+
+    /// <summary>
+    /// запустить создание и рассылку отчёта.
+    /// </summary>
+    /// <param name="reportId"></param>
+    /// <param name="reportParams"></param>
+    /// <returns></returns>
+    Task RunReport(Guid reportId, ReportParamsDto reportParams);
 }

@@ -14,12 +14,12 @@ public class ReportRepository : IReportRepository
 
     public Task<IReport[]> Reports(Func<IReport, bool>? predicate = null)
     {
-        var reports = _serviceProvider.GetServices<IReport>();
+        var reports = _serviceProvider.GetServices<IReport>().ToArray();
         if (predicate != null)
         {
-            reports = reports.Where(predicate);
+            reports = reports.Where(predicate).ToArray();
         }
 
-        return Task.FromResult(reports.ToArray());
+        return Task.FromResult(reports);
     }
 }
