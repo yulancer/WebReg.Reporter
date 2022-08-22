@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+
 using WebReg.Reporter.Data.Context.Models;
 
 namespace WebReg.Reporter.Data.Context
@@ -230,7 +233,6 @@ namespace WebReg.Reporter.Data.Context
         public virtual DbSet<RoInterviewAnswer> RoInterviewAnswers { get; set; } = null!;
         public virtual DbSet<RoInterviewStep> RoInterviewSteps { get; set; } = null!;
         public virtual DbSet<RoInvoiceReturnType> RoInvoiceReturnTypes { get; set; } = null!;
-        public virtual DbSet<RoIp> RoIps { get; set; } = null!;
         public virtual DbSet<RoIrucAbonent> RoIrucAbonents { get; set; } = null!;
         public virtual DbSet<RoIsExistRnsPfr> RoIsExistRnsPfrs { get; set; } = null!;
         public virtual DbSet<RoIssuer> RoIssuers { get; set; } = null!;
@@ -10886,38 +10888,6 @@ namespace WebReg.Reporter.Data.Context
                 entity.Property(e => e.InvoiceReturnTypeName)
                     .HasColumnType("character varying")
                     .HasColumnName("invoice_return_type_name");
-            });
-
-            modelBuilder.Entity<RoIp>(entity =>
-            {
-                entity.HasKey(e => e.IpId)
-                    .HasName("pk_ip");
-
-                entity.ToTable("ro_ip");
-
-                entity.HasComment("Таблица IP серверов");
-
-                entity.HasIndex(e => e.ServerId, "ip_server_id_idx");
-
-                entity.HasIndex(e => new { e.IpAddress, e.ServerId }, "sk_ip_server")
-                    .IsUnique();
-
-                entity.Property(e => e.IpId)
-                    .HasColumnName("ip_id")
-                    .HasComment("Идентификатор");
-
-                entity.Property(e => e.IpAddress)
-                    .HasColumnName("ip_address")
-                    .HasComment("IP Адрес");
-
-                entity.Property(e => e.ServerId)
-                    .HasColumnName("server_id")
-                    .HasComment("Сервер");
-
-                entity.HasOne(d => d.Server)
-                    .WithMany(p => p.RoIps)
-                    .HasForeignKey(d => d.ServerId)
-                    .HasConstraintName("fk_server");
             });
 
             modelBuilder.Entity<RoIrucAbonent>(entity =>

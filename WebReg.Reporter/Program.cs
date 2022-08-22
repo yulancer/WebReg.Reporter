@@ -1,3 +1,4 @@
+using WebReg.Reporter.Data.Context;
 using WebReg.Reporter.WebApi.Application;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,11 @@ builder.Services.AddReporterServices();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<WebRegContext>(opt =>
+{
+    
+});
 
 var app = builder.Build();
 

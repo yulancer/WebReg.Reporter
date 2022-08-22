@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReportsDto\WebReg.Reporter.Reports.Contracts.csproj" />
+    <ProjectReference Include="..\WebReg.Reporter.Data.Context\WebReg.Reporter.Data.Context.csproj" />
+    <ProjectReference Include="..\WebReg.Reporter.Domain.Contracts\WebReg.Reporter.Domain.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

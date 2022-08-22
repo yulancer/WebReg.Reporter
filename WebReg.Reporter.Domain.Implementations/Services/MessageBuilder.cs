@@ -19,8 +19,8 @@ public class MessageBuilder : IMessageBuilder
         var bodyTemplate = template.BodyTemplate;
         var headerTemplate = template.HeaderTemplate;
 
-        var bodyData = data.BodyData;
-        var headerData = data.HeaderData;
+        var bodyData = data?.BodyData;
+        var headerData = data?.HeaderData;
 
         var body = _templateEngine.Parse(bodyTemplate, bodyData, customer);
         var header = _templateEngine.Parse(headerTemplate, headerData, customer);

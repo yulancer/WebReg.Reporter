@@ -10,7 +10,6 @@ namespace WebReg.Reporter.Data.Context.Models
     {
         public RoServer()
         {
-            RoIps = new HashSet<RoIp>();
             RoMessengerUpdaters = new HashSet<RoMessengerUpdater>();
             RoMessengers = new HashSet<RoMessenger>();
         }
@@ -53,7 +52,6 @@ namespace WebReg.Reporter.Data.Context.Models
         public DateTime? OffTime { get; set; }
 
         public virtual RoAgent Agent { get; set; } = null!;
-        public virtual ICollection<RoIp> RoIps { get; set; }
         public virtual ICollection<RoMessengerUpdater> RoMessengerUpdaters { get; set; }
         public virtual ICollection<RoMessenger> RoMessengers { get; set; }
     }

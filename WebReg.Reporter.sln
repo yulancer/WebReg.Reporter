@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleSender", "ConsoleSen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Data.Context", "WebReg.Reporter.Data.Context\WebReg.Reporter.Data.Context.csproj", "{16A8C5EE-792F-413E-8BA0-884E0178509D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReg.Reporter.Reports.DbReports", "WebReg.Reporter.Reports.DbReports\WebReg.Reporter.Reports.DbReports.csproj", "{93677E68-D73F-4A48-9B0B-CA64FCE51033}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +129,10 @@ Global
 		{16A8C5EE-792F-413E-8BA0-884E0178509D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16A8C5EE-792F-413E-8BA0-884E0178509D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16A8C5EE-792F-413E-8BA0-884E0178509D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93677E68-D73F-4A48-9B0B-CA64FCE51033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93677E68-D73F-4A48-9B0B-CA64FCE51033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93677E68-D73F-4A48-9B0B-CA64FCE51033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93677E68-D73F-4A48-9B0B-CA64FCE51033}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,6 +157,7 @@ Global
 		{34297454-736A-4EFA-9581-C491F561655A} = {256EF08A-1F0F-45EE-8126-5CE69588C9C0}
 		{8F729738-E491-418E-8DD4-1B48C2AA0242} = {1F2BBFC1-2DD6-4A2C-8669-C1F928955C24}
 		{16A8C5EE-792F-413E-8BA0-884E0178509D} = {A31D4DF2-3EA7-433B-9D29-BB23CB11A36A}
+		{93677E68-D73F-4A48-9B0B-CA64FCE51033} = {75BFE2FF-1E45-439D-8355-D7D38638EF31}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2BA94EF-68E9-4DD4-9101-F342D902224A}
