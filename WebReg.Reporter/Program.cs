@@ -1,14 +1,16 @@
+using AutoMapper;
 using Lamar.Microsoft.DependencyInjection;
 using WebReg.Reporter.Data.Context;
 using WebReg.Reporter.WebApi.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseLamar();
+builder.Host.UseLamar(registry => registry.IncludeRegistry<ReporterServicesRegistry>());
 
 // Add services to the container.
-builder.Services.AddReporterServices();
-
+// builder.Services.AddReporterServices();
+builder.Services.AddSingleton(new MapperConfiguration(mc => mc.AddMaps(AppDomain.CurrentDomain.GetAssemblies()))
+    .CreateMapper());
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
