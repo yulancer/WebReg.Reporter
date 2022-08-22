@@ -1,7 +1,10 @@
+using Lamar.Microsoft.DependencyInjection;
 using WebReg.Reporter.Data.Context;
 using WebReg.Reporter.WebApi.Application;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseLamar();
 
 // Add services to the container.
 builder.Services.AddReporterServices();
